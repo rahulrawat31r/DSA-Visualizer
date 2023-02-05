@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Prosto+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="nqueen.css">
+    <title>N Queen Visualization</title>
+</head>
+<body>
+    <div class="nav">
+        <h2>N Queen Visualization</h2>
+        <a href="/">Home</a>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <ul class="r1">
+                <li class="c1"><img src="https://cdn.pixabay.com/photo/2013/07/12/13/27/queen-147057_1280.png" alt="" height="30px"></li>
+                <li class="c2"><img src="" alt="" height="30px"></li>
+                <li class="c3"><img src="" alt="" height="30px"></li>
+                <li class="c4"><img src="" alt="" height="30px"></li>
+                <li class="c5"><img src="" alt="" height="30px"></li>
+                <li class="c6"><img src="" alt="" height="30px"></li>
+                <li class="c7"><img src="" alt="" height="30px"></li>
+                <li class="c8"><img src="" alt="" height="30px"></li>
+            </ul>
+            <ul class="r2">
+                <li class="c1"><img src="" height="30px" alt=""></li>
+                <li class="c2"><img src="" height="30px" alt=""></li>
+                <li class="c3"><img src="" height="30px" alt=""></li>
+                <li class="c4"><img src="" height="30px" alt=""></li>
+                <li class="c5"><img src="" height="30px" alt=""></li>
+                <li class="c6"><img src="" height="30px" alt=""></li>
+                <li class="c7"><img src="" height="30px" alt=""></li>
+                <li class="c8"><img src="" height="30px" alt=""></li>
+            </ul>
+            <ul class="r3">
+                <li class="c1"><img src="" height="30px" alt=""></li>
+                <li class="c2"><img src="" height="30px" alt=""></li>
+                <li class="c3"><img src="" height="30px" alt=""></li>
+                <li class="c4"><img src="" height="30px" alt=""></li>
+                <li class="c5"><img src="" height="30px" alt=""></li>
+                <li class="c6"><img src="" height="30px" alt=""></li>
+                <li class="c7"><img src="" height="30px" alt=""></li>
+                <li class="c8"><img src="" height="30px" alt=""></li>
+            </ul>
+            <ul class="r4">
+                <li class="c1"><img src="" height="30px" alt=""></li>
+                <li class="c2"><img src="" height="30px" alt=""></li>
+                <li class="c3"><img src="" height="30px" alt=""></li>
+                <li class="c4"><img src="" height="30px" alt=""></li>
+                <li class="c5"><img src="" height="30px" alt=""></li>
+                <li class="c6"><img src="" height="30px" alt=""></li>
+                <li class="c7"><img src="" height="30px" alt=""></li>
+                <li class="c8"><img src="" height="30px" alt=""></li>
+            </ul>
+            <ul class="r5">
+                <li class="c1"><img src="" height="30px" alt=""></li>
+                <li class="c2"><img src="" height="30px" alt=""></li>
+                <li class="c3"><img src="" height="30px" alt=""></li>
+                <li class="c4"><img src="" height="30px" alt=""></li>
+                <li class="c5"><img src="" height="30px" alt=""></li>
+                <li class="c6"><img src="" height="30px" alt=""></li>
+                <li class="c7"><img src="" height="30px" alt=""></li>
+                <li class="c8"><img src="" height="30px" alt=""></li>
+            </ul>
+            <ul class="r6">
+                <li class="c1"><img src="" height="30px" alt=""></li>
+                <li class="c2"><img src="" height="30px" alt=""></li>
+                <li class="c3"><img src="" height="30px" alt=""></li>
+                <li class="c4"><img src="" height="30px" alt=""></li>
+                <li class="c5"><img src="" height="30px" alt=""></li>
+                <li class="c6"><img src="" height="30px" alt=""></li>
+                <li class="c7"><img src="" height="30px" alt=""></li>
+                <li class="c8"><img src="" height="30px" alt=""></li>
+            </ul>
+            <ul class="r7">
+                <li class="c1"><img src="" height="30px" alt=""></li>
+                <li class="c2"><img src="" height="30px" alt=""></li>
+                <li class="c3"><img src="" height="30px" alt=""></li>
+                <li class="c4"><img src="" height="30px" alt=""></li>
+                <li class="c5"><img src="" height="30px" alt=""></li>
+                <li class="c6"><img src="" height="30px" alt=""></li>
+                <li class="c7"><img src="" height="30px" alt=""></li>
+                <li class="c8"><img src="" height="30px" alt=""></li>
+            </ul>
+            <ul class="r8">
+                <li class="c1"><img src="" height="30px" alt=""></li>
+                <li class="c2"><img src="" height="30px" alt=""></li>
+                <li class="c3"><img src="" height="30px" alt=""></li>
+                <li class="c4"><img src="" height="30px" alt=""></li>
+                <li class="c5"><img src="" height="30px" alt=""></li>
+                <li class="c6"><img src="" height="30px" alt=""></li>
+                <li class="c7"><img src="" height="30px" alt=""></li>
+                <li class="c8"><img src="" height="30px" alt=""></li>
+            </ul>
+        </div>
+
+        <div class="options">
+            <input type="number" max="8" min="1" id="size" placeholder="Enter the number of queens">
+            <input type="range" min="100" max = "500" value = "250" name="slider" id="time" onpointermove="sliderval()" onclick="sliderval()">
+            <span id="rangeval">Timing for a Move : <span id="rval">250</span>ms</span>
+            <button id = "btn" onclick="queenvisualizer()">Align Them !</button>
+        </div>
+    </div>
+
+    <div id="errmsg">
+        Stack is full !
+    </div>
+
+    <div class="copyright">
+        &#169; Rahul Rawat
+    </div>
+    <script>
+        let arr = [];
+        let pos = [];
+        let imgpos = [];
+        let counter = 0;
+    </script>
+    <!-- <script src="worker2.js"></script> -->
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+html        
+    include ../binarysearch.html
+style 
+    include ../binarysearch.css
+script 
+    include ../worker2.js
+script.
+    arr = [];
+    counter = 0;
+    let checker;
+    helping = [];
+    let toFind;
+    randomizer(arr);
+    // document.getElementById('randomwala').click();
+
+    window.onload = function (a) {
+        window.onkeydown = function (a) {
+            if (a.keyCode == 39){
+                document.getElementById('nextstep').click();
+                document.getElementById('nextstep').style.backgroundColor = 'greenyellow';
+                setTimeout(() => {
+                    document.getElementById('nextstep').style.backgroundColor = 'red';
+                    
+                }, 300);
+            }
+        };
+    };

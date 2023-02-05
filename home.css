@@ -1,0 +1,415 @@
+body{
+    margin: 0px;
+    /* background-position-y: -10px; */
+    background-size: cover;
+    color: white;
+    font-family: prosto one;
+}
+
+.nav{
+    display: flex;
+    font-family: 'Righteous', cursive;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: rgb(114, 242, 253);
+    font-weight: bolder;
+    border : 2px solid transparent;
+    border-bottom-color: rgb(133, 218, 251);
+    box-shadow: 0px 0px 15px 1px blue;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    backdrop-filter: blur(5px);
+    text-shadow: 0px 2px 12px rgb(5, 188, 29);
+
+}
+
+.nav h1{
+    padding: 0px;
+    margin : 2px;
+
+}
+
+
+
+.container{
+    /* border : 2px solid red; */
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(153, 187, 255);
+    opacity: 80%;
+    /* bottom: 0.1%; */
+    /* position: absolute; */
+    /* left: 45%; */
+}
+
+.options{
+    /* border : 2px solid yellow; */
+    border-radius: 16px;
+    box-shadow: 0px 0px 22px 0.2px rgb(177, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 15px;
+
+    background-color: rgb(33, 1, 27);
+}
+
+.options a{
+    text-decoration: none;
+    color: inherit;
+    margin: 20px;
+    border: 2px solid transparent;
+    padding: 15px;
+    border-radius: 18px;
+    background-color: aqua;
+    color: rgb(19, 11, 55);
+    font-weight: bold;
+    font-size: 18px;
+
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+    animation-name: btnanim;
+    animation-duration: 0.9s;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes btnanim {
+    0%,100%{
+        background-color: aqua;
+    }
+
+    50%{
+        background-color: aquamarine;
+    }
+}
+
+.options a:hover{
+    animation-name: a;
+    background-color: black;
+    color: yellow;
+    border-color: aqua;
+    box-shadow: 0px 0px 12px 1px aqua;
+}
+
+/* .slogan{
+    font-family: 'Changa', sans-serif;
+    font-size: 30px;
+    color:rgb(255, 0, 204);
+
+    animation-name: slogananim;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+
+    text-shadow: 0px 5px 15px;
+} */
+
+/* .neon{
+    color: rgb(255, 135, 223);
+    text-shadow: 0px 0px 20px rgb(255, 0, 200),
+     0px 0px 26px rgb(255, 0, 200),
+     0px 0px 30px rgb(255, 0, 200),
+     0px 0px 8px rgb(255, 0, 200),
+     0px 0px 10px rgb(255, 0, 200);
+    
+} */
+
+@media only screen and (max-width : 1120px) {
+    .slogan{
+        font-size: 20px;
+    }
+
+    .options a{
+        font-size: 15px;
+    }
+
+    .options{
+        padding: 5px;
+    }
+
+    .nav{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width : 500px) {
+    .slogan {
+        font-size: 18px;
+    }
+}
+
+.phrase{
+    border : 4px solid rgb(128, 251, 255);
+    border-radius: 25px;
+    font-family: 'Quantico', sans-serif;
+    overflow: hidden;
+    margin: 40px 8px;
+    position: relative;
+    z-index: 1;
+    color: rgb(161, 255, 183);
+    /* margin-top: 75px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* font-family: 'Carter One', cursive; */
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: #1e1d25;
+    
+   
+}
+
+#pan{
+    color: rgb(255, 179, 0);
+    overflow: hidden;
+    animation-name: phraseanim;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+
+.cont{
+    /* border : 2px solid yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+    
+    box-shadow: 0px 0px 2px 1px aqua;
+    width: 30%;
+    height: 48.8px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    border-radius: 25px;
+    z-index: 1;
+}
+
+.cont span{
+ 
+    -webkit-text-fill-color: transparent;
+    /* -webkit-text-stroke: 0.1px rgb(12, 223, 255); */
+    background-clip: border-box;
+    background-image: linear-gradient(to right, hsl(197, 100%, 87%) 0, hsl(155, 81%, 67%) 10%, hsl(187, 13%, 26%) 20%);
+    -webkit-background-clip: text;
+
+    animation-name: spananim;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spananim {
+    0%{
+        background-position : 0px;
+    }
+
+    100%{
+        background-position: 900px;
+    }
+}
+
+@keyframes phraseanim {
+    0%{
+        transform: translate(600px);
+    }
+
+    100%{
+        transform: translate(-620px);
+    }
+}
+
+.splits{
+    /* border : 2px solid red; */
+    height: 370px;
+}
+
+.bar{
+    height: 350px;
+    /* border : 2px solid red; */
+    border-radius: 16px;
+    width: 80px;
+    /* background-color: rgb(148, 251, 255); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    box-shadow: 0px 0px 5px 1px rgb(121, 208, 255);
+}
+
+.bar span{
+    transform: rotate(-90deg);
+    font-size: 26px;
+    color: rgb(255, 255, 255)
+}
+
+.pb span{
+    transform: rotate(90deg);
+}
+
+.dot{
+    /* border : 2px solid greenyellow; */
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.bar:nth-child(1){
+    background-color: #6730EC;
+    transform-origin: bottom;
+    
+    animation-name: bar1anim;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    animation-iteration-count: infinite;
+}
+
+.bar:nth-child(2){
+    background-color: #FF9000;
+    transform-origin: bottom;
+
+    animation-name: bar2anim;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation-iteration-count: infinite;
+    
+}
+
+.bar:nth-child(3){
+    transform-origin: bottom;
+    background-color: #9ED763;
+
+    animation-name: bar3anim;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation-iteration-count: infinite;
+}
+
+.bar:nth-child(4){
+    transform-origin: bottom;
+    background-color: #815A8F;
+
+    animation-name: bar4anim;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation-iteration-count: infinite;
+}
+
+.bar:nth-child(5){
+    transform-origin: bottom;
+    background-color: rgb(207, 4, 187);
+
+    animation-name: bar5anim;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation-iteration-count: infinite;
+}
+
+.bar:nth-child(6){
+    background-color: #F73F52;
+    transform-origin: bottom;
+
+    animation-name: bar6anim;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation-iteration-count: infinite;
+}
+
+@keyframes bar1anim {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    8%,50%{
+        transform: rotate(35deg);
+    }
+
+    80%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes bar2anim {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    8%,50%{
+        transform: rotate(15deg);
+    }
+
+    80%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes bar3anim {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    8%,50%{
+        transform: rotate(-15deg);
+    }
+
+    80%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes bar4anim {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    8%,50%{
+        transform: rotate(-35deg);
+    }
+
+    80%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes bar5anim {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    8%,50%{
+        transform: rotate(-55deg);
+    }
+
+    80%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes bar6anim {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    8%,50%{
+        transform: rotate(55deg);
+    }
+
+    80%{
+        transform: rotate(0deg);
+    }
+}

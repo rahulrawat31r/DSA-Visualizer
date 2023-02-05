@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="file.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Prosto+One&display=swap" rel="stylesheet">
+
+    <title>Graphical Sorting</title>
+</head>
+<body background="https://cdn.wallpapersafari.com/59/86/XSutTf.jpg">
+    <div class="nav">
+        <h2>Graphical Sorting</h2>
+        <a href="/">Home</a>
+    </div>
+
+    <div class="taker">
+        <div class="sortselect">
+            <select name="sorting" id="sortselectoption">
+                <option value="1">Bubble Sort</option>
+                <option value="2">Merge Sort</option>
+                <option value="3">Quick Sort</option>
+                <option value="4">Insertion Sort</option>
+                <option value="5">Selection Sort</option>
+                <option value="6">Heap Sort</option>
+            </select>
+        </div>
+
+        <div class="sortbtn" onclick = 'sortit()'>
+            Feel the Sort !
+        </div>
+
+        <div class="randoming" onclick="randomizing ()">
+            Randomize them !
+        </div>
+
+        <form action="/detail" method="post">
+            <input type="text" name = 'kahajana' value = -1 id = "valuewala">
+            <input type="submit" value="View Closely.." onclick="detailsetter ()">
+        </form>
+    </div>
+
+    <div class="container">
+        <div class="box" id = "dabba">
+            <div class="bars" id="bar1"></div>
+            <div class="bars" id="bar2"></div>
+            <div class="bars" id="bar3"></div>
+            <div class="bars" id="bar4"></div>
+            <div class="bars" id="bar5"></div>
+            <div class="bars" id="bar6"></div>
+            <div class="bars" id="bar7"></div>
+            <div class="bars" id="bar8"></div>
+            <div class="bars" id="bar9"></div>
+            <div class="bars" id="bar10"></div>
+            <div class="bars" id="bar11"></div>
+            <div class="bars" id="bar12"></div>
+            <div class="bars" id="bar13"></div>
+            <div class="bars" id="bar14"></div>
+            <div class="bars" id="bar15"></div>
+            <div class="bars" id="bar16"></div>
+            <div class="bars" id="bar17"></div>
+            <div class="bars" id="bar18"></div>
+            <div class="bars" id="bar19"></div>
+            <div class="bars" id="bar20"></div>
+            <div class="bars" id="bar21"></div>
+            <div class="bars" id="bar22"></div>
+            <div class="bars" id="bar23"></div>
+            <div class="bars" id="bar24"></div>
+            <div class="bars" id="bar25"></div>
+            <div class="bars" id="bar26"></div>
+            <div class="bars" id="bar27"></div>
+            <div class="bars" id="bar28"></div>
+            <div class="bars" id="bar29"></div>
+            <div class="bars" id="bar30"></div>
+            <div class="bars" id="bar31"></div>
+            <div class="bars" id="bar32"></div>
+            <div class="bars" id="bar33"></div>
+            <div class="bars" id="bar34"></div>
+            <div class="bars" id="bar35"></div>
+            <div class="bars" id="bar36"></div>
+            <div class="bars" id="bar37"></div>
+            <div class="bars" id="bar38"></div>
+            <div class="bars" id="bar39"></div>
+            <div class="bars" id="bar40"></div>
+            <div class="bars" id="bar41"></div>
+            <div class="bars" id="bar42"></div>
+            <div class="bars" id="bar43"></div>
+            <div class="bars" id="bar44"></div>
+            <div class="bars" id="bar45"></div>
+            <div class="bars" id="bar46"></div>
+            <div class="bars" id="bar47"></div>
+            <div class="bars" id="bar48"></div>
+            <div class="bars" id="bar49"></div>
+            <div class="bars" id="bar50"></div>
+
+        </div>
+    </div>
+
+    
+    <div class="tc">
+        <p>Overall Time complexity : <span id="average">NA</span></p>
+    </div>
+    <div class="copyright">
+        &#169; Rahul Rawat
+    </div>
+
+    <div id="errmsg">
+        Already Sorted !
+    </div>
+
+    <audio controls id = "done" class = "audiowala">
+
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-bells-of-summer-929.mp3" type="audio/mpeg">
+
+      </audio>
+    <audio controls id = "start" class = "audiowala">
+
+        <source src="https://audio-previews.elements.envatousercontent.com/files/184865676/preview.mp3" type="audio/mpeg">
+
+      </audio>
+    <audio controls id = "wrong" class = "audiowala">
+
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-game-show-wrong-answer-buzz-950.mp3" type="audio/mpeg">
+
+      </audio>
+
+    <script src="worker.js"></script>
+</body>
+</html>

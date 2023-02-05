@@ -1,0 +1,232 @@
+.nav{
+    border : 4px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 18px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-color: rgb(0, 0, 0);
+    color: red;
+    text-shadow: 0px 1px 22px yellow;
+    box-shadow: 0px 0px 15px 3px rgb(146, 230, 255);
+    font-family: prosto one;
+    z-index: 0;
+    animation-name: navborderanim;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-iteration-count: infinite;
+}
+
+a{
+    color: gold;
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+}
+
+@keyframes navborderanim {
+    0%, 100%{
+        border-bottom-color: red;
+        border-top-color: red;
+
+    }
+
+    50%{
+        border-bottom-color: transparent;
+        border-top-color: transparent;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0px;
+    font-family: prosto one;
+    /* background-color: rgb(187, 238, 255); */
+}
+
+.taker{
+    /* border : 2px solid red; */
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 18px;
+}
+
+#sortselectoption{
+    outline: transparent;
+    border-color: transparent;
+    background-color: rgb(255, 183, 0);
+    padding: 10px;
+    border-radius: 12px;
+    font-weight: bolder;
+    font-size: 18px;
+    box-shadow: 0px 0px 10px 1.5px rgb(255, 77, 0);
+    font-family: prosto one;
+
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    cursor: pointer;
+}
+
+#sortselectoption:hover{
+    background-color: rgb(237, 170, 24);
+    color:darkblue;
+}
+
+.sortbtn{
+    /* border : 2px solid black; */
+    padding: 10px;
+    border-radius: 16px;
+    font-weight: bolder;
+    background-color: rgb(113, 255, 118);
+    color: rgb(52, 44, 114);
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 1.5px rgb(255, 109, 47);
+
+    animation-name: sortbtnanim;
+    animation-duration: 0.9s;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation-iteration-count: infinite;
+
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+@keyframes sortbtnanim {
+    0%, 100%{
+        background-color: rgb(113, 255, 118);
+    }
+
+    50%{
+        background-color: rgb(151, 252, 255);
+    }
+}
+
+.sortbtn:hover{
+    background-color: greenyellow;
+    border : 2px solid black;
+}
+
+.randoming{
+    /* border : 2px solid black; */
+    padding: 10px;
+    border-radius: 16px;
+    background-color: rgb(200, 175, 255);
+    font-weight: bolder;
+    box-shadow: 0px 0px 10px 1.5px rgb(166, 234, 255);
+    cursor: pointer;
+
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.randoming:hover{
+    background-color: violet;
+    border : 2px solid black;
+}
+
+.box {
+    background-color: rgb(13, 3, 192,0.7);
+    /* border : 2px solid red; */
+    backdrop-filter: blur(2px);
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-evenly;
+    align-items:flex-end;
+    box-shadow: 0px 0px 15px 1px black;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 5px 6px;
+    height: 750px;
+
+}
+
+.bars{
+    
+    height: 200px;
+    border : 2px solid black;
+    width: 1.5%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: rgb(255, 208, 0);
+
+    /* transition-property: height; */
+    /* transition-duration: 0.8s; */
+    /* transition-timing-function: linear; */
+    /* position: relative; */
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(153, 187, 255);
+    opacity: 80%;
+    bottom: 0.1%;
+}
+
+.tc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    font-size: 36px;
+    color: rgb(154, 247, 255);
+}
+
+#errmsg{
+    border : 2px solid red;
+    position: absolute;
+    /* top: 300px; */
+    top: 0px;
+    left: 290px;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: red;
+    font-family: prosto one;
+    font-weight: bold;
+    z-index: -1;
+
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.audiowala{
+    display: none;
+}
+
+#valuewala{
+    display: none;
+}
+
+input[type='submit']{
+    border : 2px solid transparent;
+    padding: 12px;
+    border-radius: 16px;
+    font-family: prosto one;
+    background-color: rgb(244, 24, 192);
+    font-weight: bolder;
+    font-size: 18px;
+    box-shadow: 0px 0px 12px 2px rgb(177, 255, 135);
+
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+input[type='submit']:hover{
+    cursor: pointer;
+    border-color: black;
+    background-color: rgb(248, 66, 206);
+}

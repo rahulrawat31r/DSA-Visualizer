@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue Visualization</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Prosto+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="queue.css">
+</head>
+<body background="https://img.freepik.com/free-vector/seamless-white-interlaced-rounded-arc-patterned-background_53876-97975.jpg?w=2000">
+    <div class="nav">
+        <h1>Queue Visualization</h1>
+        <a href="/">Home</a>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <div id="atm"><img src="https://www.transparentpng.com/thumb/atm/gji7Is-atm-cut-out-png.png" height = "160px" alt=""></div>
+            <div class="boxes" id="box1"><img id = 'img1' src="" height="140px" alt=""></div>
+            <div class="boxes" id="box2"><img id = 'img2' src="" height="140px" alt=""></div>
+            <div class="boxes" id="box3"><img id = 'img3' src="" height="140px" alt=""></div>
+            <div class="boxes" id="box4"><img id = 'img4' src="" height="140px" alt=""></div>
+            <div class="boxes" id="box5"><img id = 'img5' src="" height="140px" alt=""></div>
+        </div>
+
+        <div class="options">
+            <div id="enqueue" onclick="enqueue()">Enqueue Operation</div>
+            <div id="dequeue" onclick="dequeue()">Dequeue Operation</div>
+        </div>
+    </div>
+
+    <div class="principle">It follows FIFO principle i.e., First In First Out !</div>    
+
+    <div class="copyright">
+        &#169; Rahul Rawat
+    </div>
+
+    <div id="errmsg">
+        Stack is full !
+    </div>
+
+
+    <script src="worker2.js"></script>
+    <script>
+        imgarr = ['https://iili.io/H0Y1L2p.png','https://iili.io/H0YGuiG.png','https://iili.io/H0YMFI9.png','https://iili.io/H0YWyrJ.png','https://iili.io/H0YjmB9.png'];
+        arr = [];
+        counter = 0;
+
+        window.onload = function (a) {
+            window.onkeydown = function (a) {
+                if (a.keyCode == 37) {
+                    if (imgarr.length != 0){
+                        btnclickcolor ('enqueue');
+                        document.getElementById('enqueue').click();
+                    }
+                }
+
+                else if (a.keyCode == 39){
+                    if (arr.length != 0){
+                        btnclickcolor ('dequeue');
+                        document.getElementById('dequeue').click();
+                    }
+                }
+            };
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stocks.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Prosto+One&display=swap" rel="stylesheet">
+
+    <title>Stacks Visualizer</title>
+</head>
+<body background="https://www.hdwallpapers.in/download/blue_abstract_2-wide.jpg">
+    <div class="nav">
+        <h1>Stack Visualizer</h1>
+        <a href="/"> Home </a>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <div class="boxes" id="box1"></div>
+            <div class="boxes" id="box2"></div>
+            <div class="boxes" id="box3"></div>
+            <div class="boxes" id="box4"></div>
+            <div class="boxes" id="box5"></div>
+        </div>
+
+        <div class="tos" id = 'itos'>Top of Stack</div>
+
+        <div class="options">
+            <div id="push" onclick="push()">Push an Element</div>
+            <div id="pop" onclick="pop()">Pop an Element</div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        &#169; Rahul Rawat
+    </div>
+
+    <div id="errmsg">
+        Stack is full !
+    </div>
+
+    <div class="principle">It follows LIFO principle i.e., Last In First Out !</div>
+
+    <script src="worker2.js"></script>
+    <script>
+            main = [];
+            helping = [1,2,3,4,5]
+
+            counter = 0;
+
+            window.onload = function (a) {
+                window.onkeydown = function (a) {
+                    if (a.keyCode == 38) {
+                        if (main.length != 0){
+                            btnclickcolor ('pop');
+                            document.getElementById('pop').click();
+                        }
+                    }
+
+                    else if (a.keyCode == 40){
+                        if (helping.length != 0){
+                            btnclickcolor ('push');
+                            document.getElementById('push').click();
+                        }
+                    }
+                };
+            };
+
+        
+    </script>
+</body>
+</html>

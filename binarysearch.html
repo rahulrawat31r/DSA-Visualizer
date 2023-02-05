@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Prosto+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="binarysearch.css">
+    <title>Binary Search </title>
+</head>
+<body background="https://mobimg.b-cdn.net/v3/fetch/84/84738f85d5f04b91e003c35a0b5c40e2.jpeg">
+    <div class="nav">
+        <h2>Binary Search</h2>
+        <a href="/">Home</a>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <div class="boxes" id="bar1"></div>
+            <div class="boxes" id="bar2"></div>
+            <div class="boxes" id="bar3"></div>
+            <div class="boxes" id="bar4"></div>
+            <div class="boxes" id="bar5"></div>
+        </div>
+
+        <div class="options">
+            <div class="search" id = 'searcher' onclick="inputtaker()">
+                Enter an element to search !
+            </div>
+            <div class="search" id = 'nextstep' onclick="binaryvisualizer()">
+                Next Step
+            </div>
+            <div class="search random" id ='randomwala' onclick="randomizer (arr)">Randomize Array</div>
+        </div>
+    </div>
+
+    <div class="cont2">
+        <div class="algorithm">
+            <ol>
+                <li>Start by initializing the lower bound of the search interval to the first element of the array and the upper bound to the last element.</li>
+                <li>Find the middle element of the array by calculating the average of the lower and upper bounds (mid = (low + high) / 2).</li>
+                <li>Compare the middle element with the target value.
+                    <ul>
+                        <li>If the middle element is equal to the target value, return its index.</li>
+                        <li>If the target value is less than the middle element, set the upper bound to be one element before the middle element.</li>
+                        <li>If the target value is greater than the middle element, set the lower bound to be one element after the middle element.</li>
+    
+                    </ul>
+                </li>
+                <li>Repeat steps 2 and 3 until the target value is found or the lower bound becomes greater than the upper bound, indicating that the target value is not in the array.</li>
+                <li>If the target value is found, return its index. If it is not found, return -1 to indicate that the target value is not in the array.</li>
+            </ol>
+    
+            Note that this algorithm works only when the input array is sorted.
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        &#169; Rahul Rawat
+    </div>
+
+    <div id="errmsg">
+        Already Sorted !
+    </div>
+
+    <script src="worker2.js"></script>
+    <script>
+        arr = [];
+    counter = 0;
+    let checker;
+    helping = [];
+    let toFind;
+    randomizer(arr);
+    // document.getElementById('randomwala').click();
+
+    window.onload = function (a) {
+        window.onkeydown = function (a) {
+            if (a.keyCode == 39){
+                document.getElementById('nextstep').click();
+                document.getElementById('nextstep').style.backgroundColor = 'greenyellow';
+                setTimeout(() => {
+                    document.getElementById('nextstep').style.backgroundColor = 'red';
+                    
+                }, 300);
+            }
+        };
+    };
+    </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+.nav{
+    border : 4px solid transparent;
+    display: flex;
+    align-items: center;
+    border-bottom-color: rgb(2, 255, 204);
+    justify-content: space-around;
+    
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-color: rgb(0, 0, 0);
+    color: red;
+    /* text-shadow: 0px 1px 22px yellow; */
+    box-shadow: 0px 0px 15px 3px rgb(146, 230, 255);
+    font-family: 'prosto one';
+    z-index: 0;
+    
+}
+
+.nav h2{
+    font-family: 'Anton', sans-serif;
+    font-size: 60px;
+    margin: 10px;
+    -webkit-text-fill-color: transparent;
+    /* -webkit-text-stroke: 1px red; */
+    background-clip: border-box;
+    background-image: linear-gradient(to right, hsl(197, 100%, 67%) 0, hsl(155, 81%, 67%) 10%, hsl(188, 9%, 18%) 20%);
+    -webkit-background-clip: text;
+   
+    animation-name: navanim;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes navanim {
+    0%{
+        background-position: 0px;
+    }
+
+    100%{
+        background-position: 335px;
+    }
+}
+
+a{
+    color: gold;
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+}
+
+body{
+    margin: 0px;
+    background-color: rgb(4, 19, 106);
+    font-family: prosto one;
+}
+
+
+.container{
+    /* border : 2px solid red; */
+    margin-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.box{
+    /* border : 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 25px 15px;
+    width: 50%;
+    border-radius: 16px;
+    background-color: black;
+    box-shadow: 0px 0px 12px 1px rgb(162, 229, 255);
+
+}
+
+.boxes{
+    height: 70px;
+    width: 70px;
+    border : 2px solid rgb(110, 216, 243);
+    background-color: rgb(248, 66, 248);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 18px;
+
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.search {
+    /* border : 2px solid red; */
+    padding: 12px;
+    border-radius: 12px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    margin: 0px 12px;
+
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.search:hover{
+    background-color: rgb(12, 158, 4);
+}
+
+.cont2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.algorithm{
+    /* border : 2px solid red; */
+    margin: 70px;
+    width: 50%;
+    border-radius: 12px;
+    font-family: 'Signika Negative', sans-serif;
+    padding: 6px;
+    font-weight: bold;
+    background-color: rgb(90, 203, 154);
+    box-shadow: 0px 0px 25px 1px rgb(193, 253, 253);
+}
+
+.algorithm li{
+    padding: 6px 0px;
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(153, 187, 255);
+    opacity: 80%;
+    bottom: 0.1%;
+}
+
+#errmsg{
+    border : 2px solid red;
+    position: absolute;
+    /* top: 300px; */
+    top: 0px;
+    left: 1000px;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: red;
+    font-family: prosto one;
+    font-weight: bold;
+    z-index: -1;
+
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
